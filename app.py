@@ -1,12 +1,16 @@
- 
 from flask import Flask, render_template, send_from_directory
 import os
 
 app = Flask(__name__)
+app.config.from_object('config.Config')
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/form')
+def form():
+    return render_template('form.html')
 
 @app.route('/favicon.ico')
 def favicon():

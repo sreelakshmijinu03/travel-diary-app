@@ -1,0 +1,60 @@
+<!-- Location Field -->
+<div class="form-group">
+    <label for="location">Location *</label>
+    <input type="text" 
+           id="location" 
+           name="location"
+           required 
+           placeholder="e.g., Paris, France">
+</div>
+
+<!-- Date Field -->
+<div class="form-group">
+    <label for="date">Date *</label>
+    <input type="date" 
+           id="date" 
+           name="date"
+           required>
+</div>
+
+<!-- Notes Field -->
+<div class="form-group">
+    <label for="notes">Travel Notes *</label>
+    <textarea id="notes" 
+              name="notes"
+              required 
+              placeholder="Describe your experience..."></textarea>
+</div>
+
+<!-- Tags Field -->
+<div class="form-group">
+    <label for="tags">Tags (comma-separated)</label>
+    <input type="text" 
+           id="tags" 
+           name="tags"
+           placeholder="e.g., adventure, beach, food">
+</div>
+
+<!-- Rating Field -->
+<div class="form-group">
+    <label>Rating</label>
+    <div class="rating-input" id="ratingInput">
+        <span data-rating="1">★</span>
+        <span data-rating="2">★</span>
+        <span data-rating="3">★</span>
+        <span data-rating="4">★</span>
+        <span data-rating="5">★</span>
+    </div>
+    <input type="hidden" id="rating" name="rating" value="0">
+</div>
+
+<!-- Image Upload Field -->
+<div class="form-group">
+    <label for="image">Upload Photo</label>
+    <input type="file" 
+           id="image" 
+           name="image"
+           accept="image/*" 
+           onchange="previewImage(event)">
+    <div id="imagePreviewContainer" class="image-preview-container"></div>
+</div>
